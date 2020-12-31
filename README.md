@@ -66,7 +66,7 @@ where 'immediate value' means the value found in memory immediately after the op
 
 below are the instructions and 'addressing modes' you can use in the assemble language i made!!
 
-args to instructions are separated by spaces despite the table documentation using commas. also, `M[R, I]` means `M[R]` OR `M[R]`, not actually `M[R, I]`
+args to instructions are separated by spaces despite the table documentation using commas. also, `M[R, I]` means `M[R]` OR `M[I]`, not actually `M[R, I]`
 
 - `R` stands for register. lowercase r then number e.g. `r0`
 - `I` stands for immediate. dollar sign then number e.g. `$1`
