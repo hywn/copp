@@ -29,7 +29,7 @@ the following symbols are used for the description of opcode behavior:
 
 | `icode` | behavior |
 | :-: | - |
-| 0 | `A` <- `B` (contents of register B are put into register A) |
+| 0 | `A` <- `B` (contents of register `b` are put into register `a`) |
 | 1 | `A` <- `A` + `B` |
 | 2 | `A` <- `A` & `B` |
 | 3 | `A` <- read from memory address `B` |
