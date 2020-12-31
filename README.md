@@ -23,17 +23,13 @@ here is a graphical representation of an ISA opcode (the writeup uses ranges lik
 - `icode` describes what instruction to do
 - `a` and `b` provide extra information used by instructions
 
-z
+the following symbols are used for the description of opcode behavior:
 - `A`: contents of register `a`
 - `B`: contents of register `b`
 
-i think arrow is better than `=` as assignment.
-- gives sense of direction and people seem to be very good at spacial things
-- aligns more with math/typical definition of 'equals', i.e. does A equal B (`A == B`)?
-
 | `icode` | behavior |
 | :-: | - |
-| 0 | `A` <- `B` |
+| 0 | `A` <- `B` (contents of register B are put into register A) |
 | 1 | `A` <- `A` + `B` |
 | 2 | `A` <- `A` & `B` |
 | 3 | `A` <- read from memory address `B` |
