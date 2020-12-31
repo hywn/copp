@@ -60,7 +60,7 @@ where 'immediate value' means the value found in memory immediately after the op
 
 ## instructions/addressing modes
 
-below are the instructions and 'addressing modes' you can use in the assemble language i made!!
+below are the instructions and 'addressing modes' you can use in the assembly language i made!!
 
 args to instructions are separated by spaces despite the table documentation using commas. also, `M[R, I]` means `M[R]` OR `M[I]`, not actually `M[R, I]`
 
