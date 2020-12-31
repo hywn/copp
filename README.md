@@ -73,6 +73,7 @@ args to instructions are separated by spaces despite the table documentation usi
 - `M[I]` stands for memory addressed by an immediate value
 - `PC` stands for program counter (only one `load` instruction uses this)
 - `L` stands for label (only one `load` instruction uses this)
+	- note: there isn't much difference between an immediate and a label, and I should've just let labels be special immediates... but oh well
 
 you can think of the arrow pointing left `<-`.
 
@@ -98,6 +99,11 @@ the first `R` of `jle` is the value being compared (`jle isthislte? registerwith
 <tr><td>jle</td><td><code>R,R</code></td></tr>
 </table>
 
+## immediate literals
+immediate literals are `$number`, e.g. `$4`, `$0xFF`, `$-1`.
+
+you can use negative numbers!! (gets turned into 2s complement)
+
 ## labels
 
 you can use labels to represent places in memory. start a new line and use `=labelname`.
@@ -105,6 +111,8 @@ you can use labels to represent places in memory. start a new line and use `=lab
 if you want to specify a specific location in memory to force the label to start at, you can use `=label[0x0A]` to make the location be `0x0A`.
 
 you can put arbitrary bytes after a label separated by spaces, e.g. `=hello[4] 0x00 0x01 0x02`
+
+when you want to use a label as an arg, use `:labelname`. e.g. `load r0 :mylabel`.
 
 ## comments
 
