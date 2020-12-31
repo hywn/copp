@@ -68,11 +68,12 @@ below are the instructions and 'addressing modes' you can use in the assemble la
 
 args to instructions are separated by spaces despite the table documentation using commas. also, `M[R, I]` means `M[R]` OR `M[R]`, not actually `M[R, I]`
 
-- `R` stands for register
-- `M[R]` stands for memory addressed by a register value
-- `M[I]` stands for memory addressed by an immediate value
+- `R` stands for register. lowercase r then number e.g. `r0`
+- `I` stands for immediate. dollar sign then number e.g. `$1`
+- `M[R]` stands for memory addressed by a register value. surround with square brackets e.g. `[r0]`
+- `M[I]` stands for memory addressed by an immediate value. e.g. `[$0xA0]`
 - `PC` stands for program counter (only one `load` instruction uses this)
-- `L` stands for label (only one `load` instruction uses this)
+- `L` stands for label (only one `load` instruction uses this). see special section below for more info
 	- note: there isn't much difference between an immediate and a label, and I should've just let labels be special immediates... but oh well
 
 you can think of the arrow pointing left `<-`.
@@ -98,11 +99,6 @@ the first `R` of `jle` is the value being compared (`jle isthislte? registerwith
 <!-- !!!!!!!!!!!!! -->
 <tr><td>jle</td><td><code>R,R</code></td></tr>
 </table>
-
-## immediate literals
-immediate literals are `$number`, e.g. `$4`, `$0xFF`, `$-1`.
-
-you can use negative numbers!! (gets turned into 2s complement)
 
 ## labels
 
